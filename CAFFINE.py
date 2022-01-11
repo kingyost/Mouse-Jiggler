@@ -5,9 +5,12 @@ timeCheck = datetime.now().strftime("%H:%M:%S")
 
 try:
     while timeCheck < '16:00:00' or timeCheck > '9:00:00':
-        pyautogui.moveTo(1000, 700, duration=.25)
-        time.sleep(600)
-        pyautogui.moveTo(700, 1000, duration=.25)
-        time.sleep(600)
+        pyautogui.moveTo(1, 2, duration=.25)
+        pyautogui.press('shift')
+        time.sleep(300)
+        pyautogui.moveTo(2, 1, duration=.25)
+        pyautogui.press('shift')
+        time.sleep(300)
 except KeyboardInterrupt:
+    print("user interrupted")
     pass
